@@ -77,8 +77,8 @@ class Data_Augmentation:
 
         for i, data in enumerate(self.augmented_dataset):
             cv2.imwrite(os.path.join(
-                IMAGE_FOLDER, str(i)+".jpg"), cv2.cvtColor(data["image"],cv2.COLOR_RGB2BGR))
-            self.save_bb(os.path.join(LABELS_FOLDER, str(
+                IMAGE_FOLDER, "0525_down_det_aug_" + str(i)+".jpg"), cv2.cvtColor(data["image"],cv2.COLOR_RGB2BGR))
+            self.save_bb(os.path.join(LABELS_FOLDER, "0525_down_det_aug_" + str(
                 i)+".txt"), data["bounding_boxes"])
 
     def save_bb(self, DIR_NAME, labels):
